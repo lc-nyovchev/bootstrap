@@ -347,6 +347,10 @@ angular.module('ui.bootstrap.modal', [])
         return openedWindows.top();
       };
 
+      $modalStack.getAllOpenedWindows = function () {
+        return openedWindows;
+      };
+
       $modalStack.modalRendered = function (modalInstance) {
         var modalWindow = openedWindows.get(modalInstance);
         if (modalWindow) {
